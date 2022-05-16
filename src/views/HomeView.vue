@@ -55,7 +55,9 @@
             </div>
           </div>
           <div class="hero__item set-bg">
-            <carousel :items-to-show="1" :snapAlign="'center'">
+            <carousel :items-to-show="1" :snapAlign="'center'"
+            :wrapAround="true"
+            >
               <slide v-for="slide in homeCarousel" :key="slide.id">
                 <!-- {{ slide }} -->
                 <img :src="slide.img" alt="" />
