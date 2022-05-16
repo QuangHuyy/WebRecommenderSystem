@@ -1,5 +1,6 @@
 <template>
-  <div class="featured__item" @click="onClickItem">
+  <div class="featured__item">
+  <!-- <div class="featured__item" @click="onClickItem"> -->
     <div class="featured__item__pic">
       <img :src="product.img" alt="" />
       <ul class="featured__item__pic__hover">
@@ -17,15 +18,7 @@
     <div class="featured__item__text">
       <h6>
         <a href="#">{{
-          product?.name +
-          " " +
-          product?.brand +
-          " " +
-          product?.cpu2 +
-          " " +
-          product?.ram +
-          " " +
-          product?.manHinh1
+          getProductName(product)
         }}</a>
         <!-- <a href="#">{{ product?.full_name }}</a> -->
         <!-- product?.name + " " + product?.brand + " " + product?.cpu1 -->
@@ -41,6 +34,26 @@ export default {
     product: { type: Object, default: function () {} },
   },
   methods: {
+    getProductName(product) {
+      var name =
+        getNamePart(product?.code) +
+        getNamePart(product?.name) +
+        getNamePart(product?.brand) +
+        getNamePart(product?.cpu2) +
+        getNamePart(product?.ram) +
+        getNamePart(product?.manHinh1);
+
+      return name;
+      function getNamePart(part) {
+        var p = part ?? "";
+        if (p != "") {
+          return p + " ";
+        }
+
+        return "";
+      }
+    },
+
     onClickItem(id) {
       this.$router.push({
         name: "detail",

@@ -19,18 +19,6 @@
                 <a href="#"><i class="fa fa-linkedin"></i></a>
                 <a href="#"><i class="fa fa-pinterest-p"></i></a>
               </div>
-              <!-- <div class="header__top__right__language">
-                <img src="assets/img/language.png" alt="" />
-                <div>English</div>
-                <span class="arrow_carrot-down"></span>
-                <ul>
-                  <li><a href="#">Spanis</a></li>
-                  <li><a href="#">English</a></li>
-                </ul>
-              </div> -->
-              <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Tiện ích</a>
-              </div>
             </div>
           </div>
         </div>
@@ -46,16 +34,8 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="active"><a href="#">Trang chủ</a></li>
-              <!-- <li><a href="#">Cửa hàng</a></li> -->
-              <li>
-                <a href="#">Mua thông minh</a>
-                <ul class="header__menu__dropdown">
-                  <!-- <li><a href="#">Blog</a></li> -->
-                  <!-- <li><a href="#">Shoping Cart</a></li>
-                  <li><a href="#">Check Out</a></li>
-                  <li><a href="#">Blog Details</a></li> -->
-                </ul>
+              <li class="active" @click="$router.push({ name: 'home' })">
+                <a href="#">Trang chủ</a>
               </li>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Liên hệ</a></li>
@@ -74,7 +54,9 @@
                 >
               </li>
             </ul>
-            <div class="header__cart__price">Khuyến mãi: <span>150.00 đ</span></div>
+            <div class="header__cart__price">
+              Khuyến mãi: <span>150.00 đ</span>
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +76,7 @@
             </div>
             <ul>
               <li>Địa chỉ : Hà Nội</li>
-              <li>Điện thoại: 1234567890</li>
+              <li>Điện thoại: 1900 561 252</li>
               <li>Email: therichposts@gmail.com</li>
             </ul>
           </div>
@@ -137,9 +119,7 @@
         <div class="col-lg-12">
           <div class="footer__copyright">
             <div class="footer__copyright__text">
-              <p>
-                Công ty cổ phần V-shop
-              </p>
+              <p>Công ty cổ phần V-shop</p>
             </div>
             <div class="footer__copyright__payment">
               <img src="assets/img/payment-item.png" alt="" />

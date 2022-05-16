@@ -23,8 +23,8 @@
         <i class="fa fa-phone"></i>
       </div>
       <div class="hero__search__phone__text">
-        <h5>1234567890</h5>
-        <span>support 24/7 time</span>
+        <h5>1900 561 252</h5>
+        <span>hỗ trợ 24/7</span>
       </div>
     </div>
   </div>
