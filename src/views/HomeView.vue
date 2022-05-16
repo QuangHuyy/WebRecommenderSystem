@@ -196,7 +196,6 @@ export default {
         { name: "Chuột", id: "2", code: "Chuột" },
         { name: "Laptop", id: "3", code: "Laptop" },
         { name: "Điện thoại", id: "4", code: "Điện thoại" },
-        { name: "Máy in", id: "5", code: "Máy in" },
         { name: "Máy tính bảng", id: "6", code: "Máy tính bảng" },
         { name: "Sạc", id: "7", code: "Sạc" },
         { name: "Tai nghe", id: "8", code: "Tai nghe" },
