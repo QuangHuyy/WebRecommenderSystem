@@ -360,6 +360,10 @@ export default {
 .hero__categories {
   ul {
     li {
+
+      &:hover {
+        cursor: pointer;
+      }
       &.active {
         background-color: rgb(205, 237, 205);
         color: green;
