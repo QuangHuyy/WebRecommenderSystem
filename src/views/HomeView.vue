@@ -196,7 +196,6 @@ export default {
         { name: "Chuột", id: "2", code: "Chuột" },
         { name: "Laptop", id: "3", code: "Laptop" },
         { name: "Điện thoại", id: "4", code: "Điện thoại" },
-        { name: "Máy tính bảng", id: "6", code: "Máy tính bảng" },
         { name: "Sạc", id: "7", code: "Adapter" },
         { name: "Tai nghe", id: "8", code: "Tai nghe" },
         { name: "Thiết bị mạng", id: "9", code: "Thiết bị mạng" },
@@ -204,7 +203,7 @@ export default {
       searchQueryString: "",
       displayedProducts: [],
       fetchedProducts: [],
-      itemsPerPage: 40,
+      itemsPerPage: 80,
       homeCarousel: [
         {
           id: 1,

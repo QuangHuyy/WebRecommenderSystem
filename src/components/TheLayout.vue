@@ -34,11 +34,14 @@
         <div class="col-lg-6">
           <nav class="header__menu">
             <ul>
-              <li class="active" @click="$router.push({ name: 'home' })">
-                <a href="#">Trang chủ</a>
+              <li
+                :class="{ active: $router.name == 'home' }"
+                @click="$router.push({ name: 'home' })"
+              >
+                <a>Trang chủ</a>
               </li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Liên hệ</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Liên hệ</a></li>
             </ul>
           </nav>
         </div>
@@ -54,9 +57,7 @@
                 >
               </li>
             </ul>
-            <div class="header__cart__price">
-              Khuyến mãi: <span>150.00 đ</span>
-            </div>
+            <div class="header__cart__price">Khuyến mãi: <span>0 đ</span></div>
           </div>
         </div>
       </div>
@@ -75,7 +76,7 @@
               <a href="#" class="logo">V-Shop</a>
             </div>
             <ul>
-              <li>Địa chỉ : Hà Nội</li>
+              <li>Địa chỉ: 236 Hoàng Quốc Việt, B.Từ Liêm, Hà Nội</li>
               <li>Điện thoại: 1900 561 252</li>
               <li>Email: therichposts@gmail.com</li>
             </ul>
@@ -135,6 +136,14 @@
 export default {};
 </script>
 <style lang="scss" scoped>
+.header__menu {
+  ul {
+    li {
+      cursor: pointer;
+    }
+  }
+}
+
 .header__logo {
   &:hover a {
     color: black;

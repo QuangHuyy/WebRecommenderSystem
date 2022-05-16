@@ -176,6 +176,10 @@ ol {
 	border: none;
 }
 
+.site-btn:hover {
+	background: #52800c;
+}
+
 /* Preloder */
 
 #preloder {
@@ -409,6 +413,13 @@ ol {
 	display: inline-block;
 }
 
+.header__logo:hover a{
+	color: rgb(0, 107, 11) !important;
+	/* text-decoration: underline; */
+    font-size: 32px;
+    font-weight: 500;
+}
+
 .header__menu {
 	padding: 24px 0;
 }
@@ -585,6 +596,10 @@ ol {
 	position: relative;
 	padding: 10px 25px 10px 40px;
 	cursor: pointer;
+}
+
+.hero__categories__all:hover {
+	background: #52800c;
 }
 
 .hero__categories__all i {

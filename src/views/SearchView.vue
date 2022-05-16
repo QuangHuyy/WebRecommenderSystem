@@ -30,7 +30,10 @@
   </div>
 
   <div class="row featured__filter">
-    <div class="home-skn-wrapper" v-show="listItem.length == 0">
+    <div
+      class="home-skn-wrapper"
+      v-show="listItem.length == 0 && finishSearching == false"
+    >
       <div class="skn-prod-item" v-for="skt in 4" :key="skt">
         <div class="prod-img">
           <Skeleton />
@@ -43,7 +46,13 @@
         </div>
       </div>
     </div>
-
+    <div
+      class="no-result"
+      v-show="listItem.length == 0 && finishSearching == true"
+    >
+      <img src="https://cdn-icons-png.flaticon.com/512/6134/6134065.png" />
+      <h2>Không có kết quả</h2>
+    </div>
     <div
       v-for="item in listItem"
       :key="item.code"
@@ -69,6 +78,7 @@ export default {
     return {
       listItem: [], //Danh sách sản phẩm sẽ hiển thị lên kết quả tìm kiếm
       searchQueryString: "",
+      finishSearching: false,
     };
   },
   async mounted() {
@@ -83,6 +93,7 @@ export default {
       "http://127.0.0.1:8000/v2/items/search/" + searchQuery
     );
     self.listItem = rs.data;
+    self.finishSearching = true;
     console.log(rs.data);
   },
   created() {
@@ -136,5 +147,16 @@ export default {
 }
 .featured__filter {
   padding: 0 60px;
+}
+.no-result {
+  margin: 56px auto;
+  
+  img {
+    width: 120px;
+    height: 120px;
+  }
+  h2 {
+    margin-top: 45px;
+  }
 }
 </style>
