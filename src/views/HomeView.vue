@@ -345,12 +345,20 @@ export default {
         background-color: rgb(205, 237, 205);
         color: green;
         animation: 0.5s;
-        font-weight: bold;
+        // font-weight: bold;
+  // font-style: italic bold;
       }
     }
   }
 }
 
+.featured__controls {
+  ul {
+    li {
+      padding: 4px 10px;
+    }
+  }
+}
 .featured {
   padding-top: 10px;
 }
