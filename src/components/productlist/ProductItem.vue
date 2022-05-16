@@ -11,9 +11,7 @@
     </div>
     <div class="featured__item__text">
       <h6>
-        <a href="#">{{
-          getProductName(product)
-        }}</a>
+        <a>{{ getProductName(product) }}</a>
         <!-- <a href="#">{{ product?.full_name }}</a> -->
         <!-- product?.name + " " + product?.brand + " " + product?.cpu1 -->
       </h6>
@@ -35,6 +33,15 @@ export default {
         getNamePart(product?.brand) +
         getNamePart(product?.cpu2) +
         getNamePart(product?.ram) +
+        getNamePart(product?.DauVao) +
+        getNamePart(product['Phan Giai']) +
+        getNamePart(product?.cameraTruoc) +
+        getNamePart(product?.heDieuHanh) +
+        getNamePart(product?.CongSuat) +
+        getNamePart(product?.boNhoTrong) +
+        getNamePart(product?.KetNoi) +
+        getNamePart(product?.TuongThich1) +
+        getNamePart(product['Phu song']) +
         getNamePart(product?.manHinh1);
 
       return name;

@@ -16,7 +16,7 @@
                 @click="changeCategory(item.code)"
                 :class="{ active: item.code == activeCategory }"
               >
-                <a href="#">{{ item.name }}</a>
+                <a>{{ item.name }}</a>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="section-title">
+          <div class="section-title"  id="prod-list">
             <h2>Sản phẩm nổi bật</h2>
           </div>
           <div class="featured__controls">
@@ -96,7 +96,7 @@
           </div>
         </div>
       </div>
-      <div class="home-skn-wrapper" v-show="displayedProducts.length == 0">
+      <div class="home-skn-wrapper"  v-show="displayedProducts.length == 0">
         <div class="skn-prod-item" v-for="skt in 4" :key="skt">
           <div class="prod-img">
             <Skeleton />
@@ -353,41 +353,6 @@ export default {
   .hero__text {
     h2 {
       font-family: system-ui;
-    }
-  }
-}
-
-.home-skn-wrapper {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  .skn-prod-item {
-    width: 262px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    span {
-      border-radius: 8px;
-      width: 100%;
-      height: 100%;
-    }
-
-    .prod-img {
-      width: 100%;
-      height: 178px;
-    }
-
-    .prod-name {
-      margin-top: 15px;
-      margin-bottom: 10px;
-      width: 90%;
-      height: 18px;
-    }
-    .prod-des {
-      width: 40%;
-      height: 21px;
     }
   }
 }
