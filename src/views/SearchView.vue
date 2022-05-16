@@ -28,7 +28,22 @@
       </div>
     </div>
   </div>
+
   <div class="row featured__filter">
+    <div class="home-skn-wrapper" v-show="listItem.length == 0">
+      <div class="skn-prod-item" v-for="skt in 4" :key="skt">
+        <div class="prod-img">
+          <Skeleton />
+        </div>
+        <div class="prod-name">
+          <Skeleton />
+        </div>
+        <div class="prod-des">
+          <Skeleton />
+        </div>
+      </div>
+    </div>
+
     <div
       v-for="item in listItem"
       :key="item.code"
@@ -42,9 +57,13 @@
 <script>
 import ProductItem from "@/components/productlist/ProductItem.vue";
 import axios from "axios";
+
+import { Skeleton } from "vue-loading-skeleton";
+import "vue-loading-skeleton/dist/style.css";
 export default {
   components: {
     ProductItem,
+    Skeleton,
   },
   data() {
     return {
@@ -53,9 +72,13 @@ export default {
     };
   },
   async mounted() {
-    console.log(this.$route.params);
+    console.log("mounted() : ", this.$route.params);
     var self = this;
     var searchQuery = this.$route.params.query;
+
+    if (searchQuery && searchQuery != "") {
+      self.searchQueryString = searchQuery;
+    }
     var rs = await axios.get(
       "http://127.0.0.1:8000/v2/items/search/" + searchQuery
     );
@@ -105,6 +128,11 @@ export default {
   .hero__search__phone {
     margin-left: 15px;
   }
+}
+.home-skn-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 .featured__filter {
   padding: 0 60px;

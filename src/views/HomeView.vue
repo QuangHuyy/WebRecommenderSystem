@@ -173,11 +173,11 @@ import SearchForm from "@/components/search/SearchForm.vue";
 import ProductItem from "@/components/productlist/ProductItem.vue";
 import axios from "axios";
 import { mapState } from "vuex";
-import { Skeleton } from "vue-loading-skeleton";
-import "vue-loading-skeleton/dist/style.css";
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
+import { Skeleton } from "vue-loading-skeleton";
+import "vue-loading-skeleton/dist/style.css";
 export default {
   components: {
     SideBar,
@@ -197,7 +197,7 @@ export default {
         { name: "Laptop", id: "3", code: "Laptop" },
         { name: "Điện thoại", id: "4", code: "Điện thoại" },
         { name: "Máy tính bảng", id: "6", code: "Máy tính bảng" },
-        { name: "Sạc", id: "7", code: "Sạc" },
+        { name: "Sạc", id: "7", code: "Adapter" },
         { name: "Tai nghe", id: "8", code: "Tai nghe" },
         { name: "Thiết bị mạng", id: "9", code: "Thiết bị mạng" },
       ],

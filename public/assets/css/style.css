@@ -690,8 +690,11 @@ ol {
 
 .hero__search__phone {
 	float: right;
+	cursor: pointer;
 }
-
+.hero__search__phone__icon:hover {
+background-color: rgb(193, 230, 193);
+}
 .hero__search__phone__icon {
 	font-size: 18px;
 	color: #7fad39;
