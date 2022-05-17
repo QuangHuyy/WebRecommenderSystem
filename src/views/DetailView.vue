@@ -55,16 +55,27 @@
                   <div class="price">
                     <div>{{ formatCurrency(item.price) }} đ</div>
                   </div>
-                  <div v-show="item.cpu1"><b>CPU:</b> {{ item.cpu1 }}</div>
-                  <p v-show="item.ram"><b>Ram:</b> {{ item.ram }}</p>
-                  <p v-show="item.brand"><b>Hãng:</b> {{ item.brand }}</p>
-                  <p v-show="item.vga1">
+                  <div class="prod-attr" v-show="item.cpu1">
+                    <b>CPU:</b>
+                    {{
+                      item.cpu1 + " " + item.cpu2 ?? "" + " " + item.cpu3 ?? ""
+                    }}
+                  </div>
+                  <div class="prod-attr" v-show="item.ram"><b>Ram:</b> {{ item.ram }}</div>
+                  <div class="prod-attr" v-show="item.oCung"><b>Ổ cứng:</b> {{ item.oCung }}</div>
+                  <div class="prod-attr" v-show="item.brand"><b>Hãng:</b> {{ item.brand }}</div>
+                  <div class="prod-attr" v-show="item.manHinh1">
+                    <b>Màn hình:</b> {{ item.manHinh1 + " " + item.manHinh2 }}
+                  </div>
+                  <div class="prod-attr" v-show="item.vga1">
                     <b>Card màn hình :</b> {{ item.vga1 }}
-                  </p>
-                  <p v-show="item['Phan Giai']">
+                  </div>
+                  <div class="prod-attr" v-show="item.congKetNoi1"><b>Cổng kết nối:</b> {{ item.congKetNoi1 + " " + item.congKetNoi2 ?? "" }}</div>
+                  <div class="prod-attr" v-show="item.cardManHinh1"><b>Card màn hình:</b> {{ item.cardManHinh1 + " " + item.cardManHinh2 ?? "" }}</div>
+                  <div class="prod-attr" v-show="item['Phan Giai']">
                     <b>Phân Giải:</b> {{ item["Phan Giai"] }}
-                  </p>
-                  <p v-show="item.LED"><b>LED:</b> {{ item.LED }}</p>
+                  </div>
+                  <div class="prod-attr" v-show="item.LED"><b>LED:</b> {{ item.LED }}</div>
                 </div>
               </div>
             </div>
@@ -149,6 +160,8 @@ export default {
         getNamePart(product?.name) +
         getNamePart(product?.brand) +
         getNamePart(product?.cpu2) +
+        getNamePart(product?.cpu1) +
+        getNamePart(product?.cpu3) +
         getNamePart(product?.ram) +
         getNamePart(product?.DauVao) +
         getNamePart(product["Phan Giai"]) +
@@ -439,6 +452,10 @@ h2.title:after {
   padding-left: 60px;
   padding-top: 60px;
   position: relative;
+
+  .prod-attr {
+    margin: 4px 0;
+  }
 }
 .product-information h2 {
   color: #363432;

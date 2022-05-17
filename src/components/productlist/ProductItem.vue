@@ -15,7 +15,7 @@
         <!-- <a href="#">{{ product?.full_name }}</a> -->
         <!-- product?.name + " " + product?.brand + " " + product?.cpu1 -->
       </h6>
-      <h5>{{ formatCurrency(product?.price) }}</h5>
+      <h5>{{ formatCurrency(product?.price) }} đ</h5>
     </div>
   </div>
 </template>
@@ -32,16 +32,18 @@ export default {
         getNamePart(product?.name) +
         getNamePart(product?.brand) +
         getNamePart(product?.cpu2) +
+        getNamePart(product?.cpu1) +
+        getNamePart(product?.cpu3) +
         getNamePart(product?.ram) +
         getNamePart(product?.DauVao) +
-        getNamePart(product['Phan Giai']) +
+        getNamePart(product["Phan Giai"]) +
         getNamePart(product?.cameraTruoc) +
         getNamePart(product?.heDieuHanh) +
         getNamePart(product?.CongSuat) +
         getNamePart(product?.boNhoTrong) +
         getNamePart(product?.KetNoi) +
         getNamePart(product?.TuongThich1) +
-        getNamePart(product['Phu song']) +
+        getNamePart(product["Phu song"]) +
         getNamePart(product?.manHinh1);
 
       return name;
@@ -56,18 +58,42 @@ export default {
     },
 
     onClickItem(id) {
-      this.$router.push({
-        name: "detail",
-        params: {
-          id: this.product.code,
-        },
-      });
+      if (this.$route.name == "detail") {
+        var self = this;
+        this.$router
+          .push({
+            name: "home",
+          })
+          .then(() => {
+            self.$router.push({
+              name: "detail",
+              params: {
+                id: self.product.code,
+              },
+            });
+          });
+      } else {
+        this.$router.push({
+          name: "detail",
+          params: {
+            id: this.product.code,
+          },
+        });
+      }
     },
 
     formatCurrency(money) {
-      return parseFloat(money)
-        .toFixed(2)
-        .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+      var normalized = "";
+      money = String(money);
+      for (let index = money.length - 1; index >= 0; index--) {
+        const m = money[index];
+        if ((index + 1) % 3 == 0 && index != money.length - 1) {
+          normalized = "." + normalized;
+        }
+        normalized = m + normalized;
+      }
+
+      return normalized;
     },
   },
 };
@@ -80,18 +106,22 @@ export default {
   border-radius: 8px;
   cursor: pointer;
   margin: auto;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-
+.featured__item {
+  cursor: pointer;
+}
 .featured__item:hover .featured__item__pic .featured__item__pic__hover {
   bottom: 15px;
 }
 
 .featured__item:hover {
+  cursor: pointer;
   .featured__item__text {
     a {
       color: #5c8918;
