@@ -5,159 +5,28 @@
         <div class="col-sm-3">
           <!--category-productsr-->
           <div class="left-sidebar">
-            <!-- <h1>{{ $route.params.id }}</h1> -->
-            <h2>Danh mục</h2>
-            <div class="panel-group category-products" id="accordian">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a
-                      data-toggle="collapse"
-                      data-parent="#accordian"
-                      href="#sportswear"
-                    >
-                      <span class="badge pull-right"
-                        ><i class="fa fa-plus"></i
-                      ></span>
-                      Laptop
-                    </a>
-                  </h4>
-                </div>
-                <div id="sportswear" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <ul>
-                      <li><a href="">Nike </a></li>
-                      <li><a href="">Under Armour </a></li>
-                      <li><a href="">Adidas </a></li>
-                      <li><a href="">Puma</a></li>
-                      <li><a href="">ASICS </a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a
-                      data-toggle="collapse"
-                      data-parent="#accordian"
-                      href="#mens"
-                    >
-                      <span class="badge pull-right"
-                        ><i class="fa fa-plus"></i
-                      ></span>
-                      Máy in
-                    </a>
-                  </h4>
-                </div>
-                <div id="mens" class="panel-collapse collapse">
-                  <!-- <div class="panel-body">
-                    <ul>
-                      <li><a href="">Fendi</a></li>
-                      <li><a href="">Guess</a></li>
-                      <li><a href="">Valentino</a></li>
-                    </ul>
-                  </div> -->
-                </div>
-              </div>
-
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a
-                      data-toggle="collapse"
-                      data-parent="#accordian"
-                      href="#womens"
-                    >
-                      <span class="badge pull-right"
-                        ><i class="fa fa-plus"></i
-                      ></span>
-                      Điện thoại
-                    </a>
-                  </h4>
-                </div>
-                <div id="womens" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <ul>
-                      <li><a href="">Fendi</a></li>
-                      <li><a href="">Guess</a></li>
-                      <li><a href="">Valentino</a></li>
-                      <li><a href="">Dior</a></li>
-                      <li><a href="">Versace</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title"><a href="#">Tablet</a></h4>
-                </div>
-                <div id="mens" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <ul>
-                      <li><a href="">Fendi</a></li>
-                      <li><a href="">Guess</a></li>
-                      <li><a href="">Valentino</a></li>
-                      <li><a href="">Dior</a></li>
-                      <li><a href="">Versace</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title"><a href="#">Phụ kiện</a></h4>
-                </div>
-                <div id="mens" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <ul>
-                      <li><a href="">Fendi</a></li>
-                      <li><a href="">Guess</a></li>
-                      <li><a href="">Valentino</a></li>
-                      <li><a href="">Dior</a></li>
-                      <li><a href="">Versace</a></li>
-                    </ul>
-                  </div>
-                </div>
+            <div class="brands_products">
+              <h2>Liên kết</h2>
+              <div class="brands-name">
+                <ul class="nav nav-pills nav-stacked">
+                  <li>
+                    <a> <span class="pull-right"></span>Đi đến link Shoppe</a>
+                  </li>
+                  <li>
+                    <a> <span class="pull-right"></span>Đi đến link lazada</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <!-- <div class="brands_products">
-              <h2>Loại sản phẩm</h2>
-              <div class="brands-name">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href=""> <span class="pull-right"></span>Laptop HP</a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="pull-right"></span>Tai nghe Iphone</a
-                    >
-                  </li>
-                  <li>
-                    <a href=""> <span class="pull-right"></span>Sạc Iphone</a>
-                  </li>
-                  <li>
-                    <a href=""> <span class="pull-right"></span>Sạc samsung</a>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
-            <div class="brands_products">
-              <h2>Link mua</h2>
-              <div class="brands-name">
-                <ul class="nav nav-pills nav-stacked">
-                  <li>
-                    <a href="">
-                      <span class="pull-right"></span>Đi đến link Shoppe</a
-                    >
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="pull-right"></span>Đi đến link lazada</a
-                    >
-                  </li>
-                </ul>
-              </div>
+            <div class="img-container">
+              <img
+                src="https://cdn.tgdd.vn/2022/05/banner/Trai-79x271-5.png"
+                alt=""
+              />
+              <img
+                src="https://cdn.tgdd.vn/2022/05/banner/Phai-79x271-4.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -166,32 +35,29 @@
           <div class="product-details">
             <!--product-details-->
             <div class="row">
-              <div class="col-sm-5">
+              <h3>{{ getProductName(item) }}</h3>
+
+              <div class="col-sm-7 left">
                 <div class="view-product">
                   <img :src="item.img" alt="" style="object-fit: contain" />
-                  <h3>ZOOM</h3>
+                  <h3>Yêu thích</h3>
                 </div>
               </div>
-              <div class="col-sm-7">
+              <div class="col-sm-5 right">
                 <div class="product-information">
-                  <!--/product-information-->
-                  <!-- <img :src="item.img" class="newarrival" alt="" /> -->
-                  <h2>
-                    {{
-                      item.name +
-                      (item.brand ?? "") +
-                      (item.cpu1 ?? "") +
-                      (item["Phan Giai"] ?? "")
-                    }}
-                  </h2>
-                  <p>Đánh giá: {{ item.rating }}</p>
-                  <img src="images/product-details/rating.png" alt="" />
-                  <span>
-                    <span>Giá :{{ formatCurrency(item.price) }} đ</span>
-                  </span>
-                  <p v-show="item.cpu1"><b>CPU:</b> {{ item.cpu1 }}</p>
+                  <div class="rating">
+                    <div class="text">Đánh giá:</div>
+                    <div class="rate" style="font-weight: bold">
+                      {{ item.rating }}
+                    </div>
+                    <div class="star"></div>
+                  </div>
+                  <div class="price">
+                    <div>{{ formatCurrency(item.price) }} đ</div>
+                  </div>
+                  <div v-show="item.cpu1"><b>CPU:</b> {{ item.cpu1 }}</div>
                   <p v-show="item.ram"><b>Ram:</b> {{ item.ram }}</p>
-                  <p v-show="item.brand"><b>Brand:</b> {{ item.brand }}</p>
+                  <p v-show="item.brand"><b>Hãng:</b> {{ item.brand }}</p>
                   <p v-show="item.vga1">
                     <b>Card màn hình :</b> {{ item.vga1 }}
                   </p>
@@ -199,11 +65,7 @@
                     <b>Phân Giải:</b> {{ item["Phan Giai"] }}
                   </p>
                   <p v-show="item.LED"><b>LED:</b> {{ item.LED }}</p>
-                  <!-- <a href=""
-                    ><img :src="item.img" class="share img-responsive" alt=""
-                  /></a> -->
                 </div>
-                <!--/product-information-->
               </div>
             </div>
           </div>
@@ -241,29 +103,7 @@
                 </div>
               </div>
             </div>
-
-            <!-- <section class="categories">
-              <div class="container">
-                <div class="row">
-                  <div class="categories__slider owl-carousel">
-                    <div
-                      class="col-lg-3"
-                      v-for="item in recommendedItems"
-                      :key="item.code"
-                    >
-                      <div
-                        class="categories__item set-bg"
-                        data-setbg="assets/img/categories/cat-1.jpg"
-                      >
-                        <ProductItem :product="item"></ProductItem>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section> -->
           </div>
-          <!--/recommended_items-->
         </div>
       </div>
     </div>
@@ -303,10 +143,46 @@ export default {
     };
   },
   methods: {
+    getProductName(product) {
+      var name =
+        // getNamePart(product?.code) +
+        getNamePart(product?.name) +
+        getNamePart(product?.brand) +
+        getNamePart(product?.cpu2) +
+        getNamePart(product?.ram) +
+        getNamePart(product?.DauVao) +
+        getNamePart(product["Phan Giai"]) +
+        getNamePart(product?.cameraTruoc) +
+        getNamePart(product?.heDieuHanh) +
+        getNamePart(product?.CongSuat) +
+        getNamePart(product?.boNhoTrong) +
+        getNamePart(product?.KetNoi) +
+        getNamePart(product?.TuongThich1) +
+        getNamePart(product["Phu song"]) +
+        getNamePart(product?.manHinh1);
+
+      return name;
+      function getNamePart(part) {
+        var p = part ?? "";
+        if (p != "") {
+          return p + " ";
+        }
+
+        return "";
+      }
+    },
     formatCurrency(money) {
-      return parseFloat(money)
-        .toFixed(2)
-        .replace(/\d(?=(\d{3})+\.)/g, "$&,");
+      var normalized = "";
+      money = String(money);
+      for (let index = money.length - 1; index >= 0; index--) {
+        const m = money[index];
+        if ((index + 1) % 3 == 0 && index != money.length - 1) {
+          normalized = "." + normalized;
+        }
+        normalized = m + normalized;
+      }
+
+      return normalized;
     },
   },
 };
@@ -439,16 +315,64 @@ h2.title:after {
 .padding-right {
   padding-right: 0;
 }
+
 .product-details {
   overflow: hidden;
-}
-.product-details {
-  margin-bottom: 40px;
+  // margin-bottom: 40px;
   overflow: hidden;
   margin-top: 10px;
+
+  .row {
+    .left {
+      padding-left: 0;
+
+      img {
+        margin-bottom: 8px;
+      }
+    }
+
+    .right {
+      .product-information {
+        padding: 24px 0;
+
+        .rating {
+          display: flex;
+          font-size: 18px;
+          font-style: italic;
+          align-items: center;
+          justify-content: flex-start;
+
+          .rate {
+            margin: 0 6px 0 3px;
+          }
+          .star {
+            background-image: url("https://iconarchive.com/download/i81329/icons8/christmas-flat-color/star.ico");
+            width: 18px;
+            height: 18px;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+
+        .price {
+          color: #d0021c;
+          font-size: 24px;
+          font-weight: bold;
+          margin: 10px 0;
+        }
+      }
+      text-align: left;
+    }
+  }
 }
 .view-product {
   position: relative;
+
+  h3 {
+    &:hover {
+      background-color: #fe960fc4;
+    }
+  }
 }
 .view-product img {
   border: 1px solid #f7f7f0;
@@ -457,6 +381,7 @@ h2.title:after {
 }
 .view-product h3 {
   background: #fe980f;
+  cursor: pointer;
   bottom: 0;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -464,8 +389,9 @@ h2.title:after {
   font-weight: 700;
   margin-bottom: 0;
   padding: 8px 20px;
-  position: absolute;
+  position: relative;
   right: 0;
+  width: 200px;
 }
 #similar-product {
   margin-top: 40px;
@@ -584,8 +510,8 @@ h2.title:after {
 .shop-details-tab {
   border: 1px solid #f7f7f0;
   margin-bottom: 75px;
-  margin-left: 15px;
-  margin-right: 15px;
+  // margin-left: 15px;
+  // margin-right: 15px;
   padding-bottom: 10px;
   .col-sm-12 {
     padding: 12px;
@@ -619,5 +545,42 @@ h2.title:after {
 }
 .productinfo {
   position: relative;
+}
+
+.shop-details-tab {
+  .nav-tabs {
+    padding: 14px;
+    font-weight: bold;
+  }
+
+  .tab-content {
+    text-align: left;
+  }
+}
+
+.brands_products {
+  ul {
+    justify-content: center;
+  }
+  li {
+    text-align: center;
+    a {
+      cursor: pointer;
+      &:hover {
+        font-weight: bold;
+        color: green !important;
+      }
+    }
+  }
+}
+
+.left-sidebar {
+  .img-container {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      cursor: pointer;
+    }
+  }
 }
 </style>

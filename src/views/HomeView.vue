@@ -79,7 +79,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <div class="section-title"  id="prod-list">
+          <div class="section-title" id="prod-list">
             <h2>Sản phẩm nổi bật</h2>
           </div>
           <div class="featured__controls">
@@ -96,7 +96,7 @@
           </div>
         </div>
       </div>
-      <div class="home-skn-wrapper"  v-show="displayedProducts.length == 0">
+      <div class="home-skn-wrapper" v-show="displayedProducts.length == 0">
         <div class="skn-prod-item" v-for="skt in 4" :key="skt">
           <div class="prod-img">
             <Skeleton />
@@ -360,7 +360,6 @@ export default {
 .hero__categories {
   ul {
     li {
-
       &:hover {
         cursor: pointer;
       }
@@ -379,6 +378,10 @@ export default {
   ul {
     li {
       padding: 4px 10px;
+min-width: 100px;
+      &:hover {
+        font-style: italic;
+      }
     }
   }
 }

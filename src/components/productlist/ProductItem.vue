@@ -28,7 +28,7 @@ export default {
   methods: {
     getProductName(product) {
       var name =
-        getNamePart(product?.code) +
+        // getNamePart(product?.code) +
         getNamePart(product?.name) +
         getNamePart(product?.brand) +
         getNamePart(product?.cpu2) +
